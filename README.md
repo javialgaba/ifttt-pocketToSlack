@@ -9,8 +9,9 @@ $ npm i -g wt-cli
 $ wt init
 ```
 
-After that, you need to setup a new [incoming webhook](https://api.slack.com/incoming-webhooks) into your Slack. To do that, add an application to your team. Then **build** a new one [https://slack.com/apps/build]() and select *Something just for my team*. And later, select *Incoming Webhooks*. Select the channel you want to publish your articles and copy the given **webhook url**.
-![Incoming Webhook](slack-incoming-webhook.png =480x) 
+After that, you need to setup a new [incoming webhook](https://api.slack.com/incoming-webhooks) into your Slack. To do that, add an application to your team. Then **build** a new one [https://slack.com/apps/build](https://slack.com/apps/build) and select *Something just for my team*. And later, select *Incoming Webhooks*. Select the channel you want to publish your articles and copy the given **webhook url**.
+![Incoming Webhook](https://raw.githubusercontent.com/javialgaba/ifttt-pocketToSlack/master/slack-incoming-webhook.png)
+ 
 
 Execute the following snippet with your webhook url.
 
@@ -19,14 +20,14 @@ wt create --secret SLACK_WEBHOOK_URL={url} ifttt-pocketToSlack.js
 ```
 
 Finally, we need to setup our custom IFTTT recipe.
-Follow this example (If This Then Webtask): [https://auth0.com/blog/2015/07/28/if-this-then-node-dot-js-extending-ifttt-with-webtask-dot-io/]()
+Follow this example (If This Then Webtask): [https://auth0.com/blog/2015/07/28/if-this-then-node-dot-js-extending-ifttt-with-webtask-dot-io/](https://auth0.com/blog/2015/07/28/if-this-then-node-dot-js-extending-ifttt-with-webtask-dot-io/)
 
 You should end up having a recipe like the following: 
 
 ```
 {webtaksUrl}/ifttt-pocketToSlack?url={{Url}}&imageURL={{ImageUrl}}&title={{Title}}&excerpt={{Excerpt}}
 ```
-![Recipe](ifttt-recipe.png =480x)
+![Recipe](https://raw.githubusercontent.com/javialgaba/ifttt-pocketToSlack/master/ifttt-recipe.png.png)
 
 # LICENSE
 The MIT License (MIT)
